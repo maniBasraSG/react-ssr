@@ -1,0 +1,5 @@
+MODE=production 
+BASE_API=
+PORT=80
+
+

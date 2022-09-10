@@ -1,0 +1,237 @@
+@import './reset';
+@import './variables';
+@import './fonts';
+@import './mixins';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  img,
+  svg {
+    pointer-events: none;
+  }
+}
+
+img {
+  width: auto;
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+}
+
+input {
+  border: none;
+}
+
+::placeholder {
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+label {
+  margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+  // -webkit-text-fill-color: $tradewind;
+}
+
+// Hide Input Number Arrows
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+:focus {
+  outline: 1px dotted transparent;
+}
+
+/*
+		Position
+*/
+.position-relative {
+  position: relative;
+}
+
+/*
+		Margin and Padding
+*/
+.mx-auto {
+  margin: 0 auto;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+
+/*
+		Flex
+*/
+.d-none {
+  display: none;
+}
+.d-flex {
+  display: flex;
+}
+.flex-grow {
+  & > * {
+    flex: 1;
+  }
+}
+.d-inline-flex {
+  display: inline-flex;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+}
+.flex-inline-center {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column-fluid {
+  flex: 1 0 auto;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-items-top {
+  align-items: flex-start;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.d-none {
+  display: none !important;
+}
+
+/*
+		Pointer
+*/
+.no-pointer {
+  pointer-events: none;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.not-allowed {
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+
+/*
+		Text
+*/
+.text-center {
+  text-align: center;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+/*
+		width and height
+*/
+.w-100 {
+  width: 100%;
+}
+.w-50 {
+  width: 50%;
+}
+.h-100 {
+  height: 100%;
+}
+
+/*
+		visibility
+*/
+.hidden {
+  width: 100%;
+  height: 100%;
+
+  visibility: hidden;
+}
+.visibility-hidden {
+  visibility: hidden;
+}
+/*
+		scroll overflow
+*/
+.no-scroll {
+  overflow: hidden;
+}

@@ -1,0 +1,21 @@
+version: "3.2"
+
+services:
+  pw-fe:
+    build:
+      context: .
+      dockerfile: Dockerfile-server
+    command: npm run start
+    ports:
+      - "3005:3005"
+    networks:
+      - pw-fe-net
+    volumes:
+      - .:/usr/src/pwb_fe
+      - /usr/src/pwb_fe/node_modules
+    env_file:
+      - .env # it will overwrite .env file content
+
+networks:
+  pw-fe-net:
+    driver: bridge
